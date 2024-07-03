@@ -1,9 +1,13 @@
 'use client';
 import React from 'react';
 
-const ViewUserButton = () => {
+interface ViewUserButtonProps {
+  userId: number;
+}
+
+const ViewUserButton: React.FC<ViewUserButtonProps> = ({userId}) => {
   const handleButton = () => {
-    alert('Aku di Klik euy');
+    alert(`User id : ${userId}`);
   };
   return (
     <>
